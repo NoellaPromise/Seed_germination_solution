@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌱 Seed Germination Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+
+    <header>
+      <h1>🌱 Seed Germination pH Simulator</h1>
+      <p>How does water pH affect plant growth?</p>
+    </header>
+
+    <!-- TODO 1: pH Slider — SOLUTION -->
+    <section class="controls">
+      <label for="phSlider">Water pH Level:</label>
+      <input type="range" id="phSlider" min="1" max="14" step="0.1" value="7" />
+      <div class="ph-display">
+        <span id="phDisplay">7.0</span>
+        <span id="phLabel">Neutral</span>
+      </div>
+    </section>
+
+    <!-- TODO 2: Run Button — SOLUTION -->
+    <button id="runBtn" onclick="runSimulation()">▶ Run 7-Day Simulation</button>
+
+    <!-- TODO 3: Plant Visual — SOLUTION -->
+    <div class="plant-container">
+      <!-- Bonus SVG plant -->
+      <svg id="plantSvg" width="120" height="160" viewBox="0 0 120 160"></svg>
+      <div class="soil"></div>
+    </div>
+
+    <!-- TODO 4: Results Table — SOLUTION -->
+    <section class="results">
+      <h2>📊 Daily Results</h2>
+      <table id="resultsTable">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Height (cm)</th>
+            <th>Health Status</th>
+          </tr>
+        </thead>
+        <tbody id="resultsBody">
+        </tbody>
+      </table>
+    </section>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+/* ═══════════════════════════════════════════════════════
+   SOLUTION style.css (Teacher Reference)
+   ═══════════════════════════════════════════════════════ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* TODO 1: Body with smooth background transition */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0faf4;
+  color: #1a3a2a;
+  min-height: 100vh;
+  transition: background-color 0.5s ease;
+}
+
+.app {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #2d6a4f;
+}
+
+header p {
+  font-size: 15px;
+  color: #5a8a6a;
+  margin-top: 6px;
+}
+
+.controls {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* TODO 2: Slider styling */
+input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+  accent-color: #3fb950;
+  height: 6px;
+}
+
+.ph-display {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+#phDisplay {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2d6a4f;
+}
+
+#phLabel {
+  font-size: 15px;
+  color: #5a8a6a;
+}
+
+/* TODO 3: Run button with hover effect */
+#runBtn {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  background: #3fb950;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 24px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+#runBtn:hover {
+  background: #2d9e3f;
+  transform: translateY(-2px);
+}
+
+#runBtn:active {
+  transform: translateY(0);
+}
+
+/* TODO 4: Plant visual with SVG stem transition */
+.plant-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px 0;
+  height: 200px;
+  justify-content: flex-end;
+}
+
+#plantSvg {
+  margin-bottom: -4px;
+}
+
+.soil {
+  width: 160px;
+  height: 20px;
+  background: #6b4226;
+  border-radius: 10px;
+  margin-top: 4px;
+}
+
+/* TODO 5: Table styling with zebra stripes */
+.results {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  margin-top: 24px;
+}
+
+.results h2 {
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #2d6a4f;
+  color: white;
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 14px;
+}
+
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #e0f0e8;
+  font-size: 14px;
+}
+
+tr:nth-child(even) td {
+  background: #f0faf4;
+}
+
+tr:hover td {
+  background: #e0f5e9;
+}
